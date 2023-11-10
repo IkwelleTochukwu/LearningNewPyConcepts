@@ -23,12 +23,27 @@ class Resturant:
         """Increase the number served by a given amount"""
         self.number_served += number
 
+class IcecreamStand(Resturant):                         # adding a child class to the Resturant and, attaching it
+                                                         # an attribute
+    def __init__(self, resturant_name, cusine_type):
+        """Initializes attributes of the parent class"""
+        super().__init__(resturant_name, cusine_type)
+        self.flavours = ['Chocolate', 'Straw-berry', 'Vanilla'] #this accepts a list of flavour types.
+    def display_flavours(self):
+        """Print the list of available flavours"""
+        print(f"{self.flavours} Ice-cream flavour is also available")
 
 
-Res = Resturant("TeyceeFoods", "Beans&Dodo")
-Res.descirbe_resturant()
-Res.open_resturant()
-Res.set_number_served(450)
-Res.statistics()
-Res.increment_number_served(100)
-Res.statistics()
+
+
+#Res = Resturant("TeyceeFoods", "Beans&Dodo")
+#Res.descirbe_resturant()
+#Res.open_resturant()
+#Res.set_number_served(450)
+#Res.statistics()
+#Res.increment_number_served(100)
+#Res.statistics()
+
+ChildClass = IcecreamStand("TeyceeFoods", "Beans&Dodo")
+ChildClass.descirbe_resturant()
+ChildClass.display_flavours()
