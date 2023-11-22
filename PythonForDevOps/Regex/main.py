@@ -33,7 +33,7 @@ ro_SIZE = re.compile(r'(?P<SIZE>\s\d{4})')
 m_SIZE = ro_SIZE.search(check)
 
 """print the information to the screen"""
-print(f'IP ADDRESS: {m_IP.group("IP")}')
+print(f'IP_ADDRESS: {m_IP.group("IP")}')
 print(f'TIME: {m_Time.group("Time")}')
 print(f'USERID: {m_User.group("User")}')
 print(f'REQUEST: {m_REQUEST.group("REQUEST")}')
